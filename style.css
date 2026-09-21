@@ -1,0 +1,87 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: #eef4f8;
+  color: #333333;
+}
+
+header {
+  background-color: #2b5d84;
+  color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav {
+  background-color: #1d4460;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #2b5d84;
+}
+
+/* sadrzaj */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+section {
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #2b5d84;
+}
+
+/* tablica */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #999999;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #cfe3f0;
+}
+
+.galerija img {
+  width: 180px;
+  height: 130px;
+  margin: 5px;
+  border: 2px solid #2b5d84;
+}
+
+footer {
+  background-color: #1d4460;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
