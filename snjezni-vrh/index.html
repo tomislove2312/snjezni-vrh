@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNJEŽNI VRH - restoran i smještaj</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+        
+      <header>
+        
+<img src="slike/logo.svg" alt="logo planina" width="90">
+        
+        
+        <div>
+            <h1>SNJEŽNI VRH</h1>
+            <p>Restoran i smještaj u srcu Alpa</p>
+            <p>Poslušajte kakav vas mirni ugođaj čeka kod nas:</p>
+            <audio controls>
+                <source src="zvuk/ambijent_alpe.mp3" type="audio/mpeg">
+                Vaš preglednik ne podržava zvuk.
+            </audio>
+        </div>
+    </header>
+
+     <nav>
+        <a href="#pocetna">Početna</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#video">Video</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="tekst.html" style="color: red;">Prikaz koraka izrade</a>
+    </nav>
+
+    <main>
+
+       
+    <div class="glavnoipozivnica">
+    <div>
+<h2>Dobrodošli!</h2>
+            <p>
+                Restoran i smještaj <b>Snježni Vrh</b> nalazi se visoko u Alpama,
+                okružen snijegom i borovima. Kod nas možete uživati u toploj
+                domaćoj hrani, prespavati u ugodnim sobama i odmoriti se nakon
+                dugog dana na skijama.
+            </p>
+
+            <h2>Naš restoran</h2>
+            <p>U ponudi imamo tradicionalna alpska jela i topla pića:</p>
+            <ul>
+                <li>Topla goveđa juha</li>
+                <li>Domaći gulaš s njokima</li>
+                <li>Sirni fondue</li>
+                <li>Palačinke s raznim nadjevima</li>
+                <li>Kuhano vino i topla čokolada</li>
+            </ul>
+
+            <h2>Cjenik smještaja</h2>
+            <table>
+                <tr>
+                    <th>Soba</th>
+                    <th>Broj osoba</th>
+                    <th>Cijena / noć</th>
+                </tr>
+                <tr>
+                    <td>Standard soba</td>
+                    <td>2</td>
+                    <td>60 €</td>
+                </tr>
+                <tr>
+                    <td>Obiteljska soba</td>
+                    <td>4</td>
+                    <td>100 €</td>
+                </tr>
+                <tr>
+                    <td>Apartman s pogledom</td>
+                    <td>2</td>
+                    <td>90 €</td>
+                </tr>
+            </table>
+
+            <h2>Radno vrijeme</h2>
+            <p>Restoran je otvoren svaki dan od <b>08:00 do 23:00</b>.</p>
+        </div>
+        <div>
+            <img src="./slike/poster.png" alt="pozivnica">
+        </div>
+    </div>
+      
+        
+        <section id="galerija">
+            <h2>Galerija</h2>
+            <p>Nekoliko fotografija našeg restorana i okolice:</p>
+
+            <div class="galerija">
+                <img src="slike/slika1.jpg" alt="Restoran" onclick="povecaj(this)">
+                <img src="slike/slika2.jpg" alt="Soba" onclick="povecaj(this)">
+                <img src="slike/slika3.jpg" alt="Snijeg" onclick="povecaj(this)">
+                <img src="slike/slika4.jpg" alt="Hrana" onclick="povecaj(this)">
+            </div>
+
+            <div id="povecano" onclick="zatvori()">
+                <img id="velikaslika" alt="povecana slika">
+            </div>
+        
+        </section>
+            
+        
+
+        
+        <section id="video">
+            
+            <p>Pogledajte kratki video o našem restoranu:</p>
+            <video controls width="100%">
+                <source src="video/reklama.mp4" type="video/mp4">
+                
+            </video>
+        </section>
+
+        
+    
+
+    
+        <section id="kontakt">
+            <h3>Pošaljite nam upit</h3>
+        <form>
+            <p>
+                Ime:<br>
+                <input type="text" name="ime">
+            </p>
+            <p>
+                Email:<br>
+                <input type="email" name="email">
+            </p>
+            <p>
+                Poruka:<br>
+                <textarea name="poruka" rows="4"></textarea>
+            </p>
+            <p>
+                <button type="submit">Pošalji</button>
+            </p>
+        </form>
+
+        <p>Pratite nas:</p>
+        <p>
+            <a href="https://www.facebook.com">Facebook</a> |
+            <a href="https://www.instagram.com">Instagram</a> |
+            <a href="https://www.youtube.com">YouTube</a>
+        </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Snježni Vrh | Projekt iz multimedije</p>
+    </footer>
+
+<script>
+    function povecaj(slika) {
+        document.getElementById("velikaslika").src = slika.src;
+        document.getElementById("povecano").style.display = "block";
+    }
+
+    function zatvori() {
+        document.getElementById("povecano").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
