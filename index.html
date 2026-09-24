@@ -11,9 +11,12 @@
    
         
       <header>
-        <img src="slike/logo.svg" alt="Logo" width="90">
+        
+<img src="slike/logo.svg" alt="logo planina" width="90">
+        
+        
         <div>
-            <h1>Snježni Vrh</h1>
+            <h1>SNJEŽNI VRH</h1>
             <p>Restoran i smještaj u srcu Alpa</p>
             <p>Poslušajte kakav vas mirni ugođaj čeka kod nas:</p>
             <audio controls>
@@ -28,13 +31,15 @@
         <a href="#galerija">Galerija</a>
         <a href="#video">Video</a>
         <a href="#kontakt">Kontakt</a>
+        <a href="tekst.html" style="color: red;">Prikaz koraka izrade</a>
     </nav>
 
     <main>
 
        
-    <section id="pocetna">
-            <h2>Dobrodošli!</h2>
+    <div class="glavnoipozivnica">
+    <div>
+<h2>Dobrodošli!</h2>
             <p>
                 Restoran i smještaj <b>Snježni Vrh</b> nalazi se visoko u Alpama,
                 okružen snijegom i borovima. Kod nas možete uživati u toploj
@@ -78,20 +83,31 @@
 
             <h2>Radno vrijeme</h2>
             <p>Restoran je otvoren svaki dan od <b>08:00 do 23:00</b>.</p>
-        </section>
-
+        </div>
+        <div>
+            <img src="./slike/poster.png" alt="pozivnica">
+        </div>
+    </div>
+      
         
         <section id="galerija">
             <h2>Galerija</h2>
             <p>Nekoliko fotografija našeg restorana i okolice:</p>
 
             <div class="galerija">
-                <img src="slike/slika1.jpg" alt="Restoran">
-                <img src="slike/slika2.jpg" alt="Soba">
-                <img src="slike/slika3.jpg" alt="Snijeg">
-                <img src="slike/slika4.jpg" alt="Hrana">
+                <img src="slike/slika1.jpg" alt="Restoran" onclick="povecaj(this)">
+                <img src="slike/slika2.jpg" alt="Soba" onclick="povecaj(this)">
+                <img src="slike/slika3.jpg" alt="Snijeg" onclick="povecaj(this)">
+                <img src="slike/slika4.jpg" alt="Hrana" onclick="povecaj(this)">
             </div>
+
+            <div id="povecano" onclick="zatvori()">
+                <img id="velikaslika" alt="povecana slika">
+            </div>
+        
         </section>
+            
+        
 
         
         <section id="video">
@@ -108,13 +124,31 @@
 
     
         <section id="kontakt">
-            <h2>Kontakt</h2>
-            <p>Nazovite nas ili nam pišite:</p>
-            <ul>
-                <li>Telefon: 091 234 5678</li>
-                <li>Email: info@snjeznivrh.hr</li>
-                <li>Adresa: Alpska cesta 1, Alpe</li>
-            </ul>
+            <h3>Pošaljite nam upit</h3>
+        <form>
+            <p>
+                Ime:<br>
+                <input type="text" name="ime">
+            </p>
+            <p>
+                Email:<br>
+                <input type="email" name="email">
+            </p>
+            <p>
+                Poruka:<br>
+                <textarea name="poruka" rows="4"></textarea>
+            </p>
+            <p>
+                <button type="submit">Pošalji</button>
+            </p>
+        </form>
+
+        <p>Pratite nas:</p>
+        <p>
+            <a href="https://www.facebook.com">Facebook</a> |
+            <a href="https://www.instagram.com">Instagram</a> |
+            <a href="https://www.youtube.com">YouTube</a>
+        </p>
         </section>
 
     </main>
@@ -122,6 +156,17 @@
     <footer>
         <p>&copy; 2026 Snježni Vrh | Projekt iz multimedije</p>
     </footer>
+
+<script>
+    function povecaj(slika) {
+        document.getElementById("velikaslika").src = slika.src;
+        document.getElementById("povecano").style.display = "block";
+    }
+
+    function zatvori() {
+        document.getElementById("povecano").style.display = "none";
+    }
+</script>
 
 </body>
 </html>
